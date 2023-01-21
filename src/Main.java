@@ -48,10 +48,10 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int countOfPeople = 12_000_000;
-        int countOfDeath = 8 * 1000;
-        int countOfBirth = 17 * 1000;
+        float countOfDeath = 8 / 1000f;
+        float countOfBirth = 17 / 1000f;
         for (int i = 1; i <= 10; i++) {
-            countOfPeople += countOfBirth - countOfDeath;
+            countOfPeople = countOfPeople + (int) (countOfPeople * (countOfBirth - countOfDeath));
             System.out.printf("За %d год численность населения составляет %d\n", i, countOfPeople);
         }
     }
